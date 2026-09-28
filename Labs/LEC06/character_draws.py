@@ -16,11 +16,15 @@ def move_character(x, y):
 def move_circle():
     print('CIRCLE')
 
+    center_x = 400
+    center_y = 300
+    radius = 200
+
     for degree in range(0, 360, 5):
         theta = math.radians(degree)
 
-        x = 400 + 200 * math.cos(theta)
-        y = 300 + 200 * math.sin(theta)
+        x = center_x + radius * math.cos(theta)
+        y = center_y + radius * math.sin(theta)
 
         move_character(x, y)
 
