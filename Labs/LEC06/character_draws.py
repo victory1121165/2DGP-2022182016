@@ -29,20 +29,41 @@ def move_circle():
         move_character(x, y)
 
 
-def move_rectangle():
-    print('RECTANGLE')
+def move_top():
+    print('TOP')
 
     for x in range(50, 751, 5):
         move_character(x, 550)
 
+
+def move_right():
+    print('RIGHT')
+
     for y in range(550, 49, -5):
         move_character(750, y)
+
+
+def move_bottom():
+    print('BOTTOM')
 
     for x in range(750, 49, -5):
         move_character(x, 50)
 
+
+def move_left():
+    print('LEFT')
+
     for y in range(50, 551, 5):
         move_character(50, y)
+
+
+def move_rectangle():
+    print('RECTANGLE')
+
+    move_top()
+    move_right()
+    move_bottom()
+    move_left()
 
 
 move_circle()
