@@ -89,5 +89,6 @@ def move_triangle():
 
 move_circle()
 move_rectangle()
+move_triangle()
 
 close_canvas()
