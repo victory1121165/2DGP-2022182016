@@ -15,9 +15,10 @@ def move_character(x, y):
 def move_circle():
     print('CIRCLE')
 
+    for degree in range(0, 360, 5):
+        print(degree)
+
 
 move_circle()
-
-delay(2)
 
 close_canvas()
