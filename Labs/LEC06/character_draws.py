@@ -29,6 +29,11 @@ def move_circle():
         move_character(x, y)
 
 
+def move_rectangle():
+    print('RECTANGLE')
+
+
 move_circle()
+move_rectangle()
 
 close_canvas()
