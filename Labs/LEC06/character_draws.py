@@ -21,8 +21,6 @@ def move_character(x, y):
 
 
 def move_circle():
-    print('CIRCLE')
-
     center_x = 400
     center_y = 300
     radius = 200
@@ -35,36 +33,26 @@ def move_circle():
 
 
 def move_top():
-    print('TOP')
-
     for x in range(LEFT, RIGHT + 1, 5):
         move_character(x, TOP)
 
 
 def move_right():
-    print('RIGHT')
-
     for y in range(TOP, BOTTOM - 1, -5):
         move_character(RIGHT, y)
 
 
 def move_bottom():
-    print('BOTTOM')
-
     for x in range(RIGHT, LEFT - 1, -5):
         move_character(x, BOTTOM)
 
 
 def move_left():
-    print('LEFT')
-
     for y in range(BOTTOM, TOP + 1, 5):
         move_character(LEFT, y)
 
 
 def move_rectangle():
-    print('RECTANGLE')
-
     move_top()
     move_right()
     move_bottom()
@@ -72,8 +60,6 @@ def move_rectangle():
 
 
 def move_triangle():
-    print('TRIANGLE')
-
     for x in range(100, 701, 5):
         y = 100
         move_character(x, y)
