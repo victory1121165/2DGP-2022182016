@@ -37,37 +37,23 @@ def move_circle():
         move_character(x, y)
 
 
-def move_top():
+def move_rectangle():
     for x in range(LEFT, RIGHT + 1, 5):
         move_character(x, TOP)
 
-
-def move_right():
     for y in range(TOP, BOTTOM - 1, -5):
         move_character(RIGHT, y)
 
-
-def move_bottom():
     for x in range(RIGHT, LEFT - 1, -5):
         move_character(x, BOTTOM)
 
-
-def move_left():
     for y in range(BOTTOM, TOP + 1, 5):
         move_character(LEFT, y)
 
 
-def move_rectangle():
-    move_top()
-    move_right()
-    move_bottom()
-    move_left()
-
-
 def move_triangle():
     for x in range(TRIANGLE_LEFT, TRIANGLE_RIGHT + 1, 5):
-        y = TRIANGLE_TOP
-        move_character(x, y)
+        move_character(x, TRIANGLE_TOP)
 
     for x in range(TRIANGLE_RIGHT, 399, -5):
         y = TRIANGLE_TOP + (TRIANGLE_BOTTOM - TRIANGLE_TOP) * (TRIANGLE_RIGHT - x) / 300
@@ -78,9 +64,13 @@ def move_triangle():
         move_character(x, y)
 
 
-while True:
-    move_circle()
-    move_rectangle()
-    move_triangle()
+def main():
+    while True:
+        move_circle()
+        move_rectangle()
+        move_triangle()
+
+
+main()
 
 close_canvas()
