@@ -7,10 +7,10 @@ character = load_image('character.png')
 
 MOVE_DELAY = 0.02
 
-LEFT = 50
-RIGHT = 750
-TOP = 550
-BOTTOM = 50
+LEFT = 100
+RIGHT = 700
+TOP = 500
+BOTTOM = 100
 
 TRIANGLE_LEFT = 100
 TRIANGLE_RIGHT = 700
