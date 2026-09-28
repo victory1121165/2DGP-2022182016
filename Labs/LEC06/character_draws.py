@@ -5,12 +5,19 @@ open_canvas(800, 600)
 
 character = load_image('character.png')
 
+MOVE_DELAY = 0.03
+
+LEFT = 50
+RIGHT = 750
+TOP = 550
+BOTTOM = 50
+
 
 def move_character(x, y):
     clear_canvas()
     character.draw(x, y)
     update_canvas()
-    delay(0.03)
+    delay(MOVE_DELAY)
 
 
 def move_circle():
@@ -32,29 +39,29 @@ def move_circle():
 def move_top():
     print('TOP')
 
-    for x in range(50, 751, 5):
-        move_character(x, 550)
+    for x in range(LEFT, RIGHT + 1, 5):
+        move_character(x, TOP)
 
 
 def move_right():
     print('RIGHT')
 
-    for y in range(550, 49, -5):
-        move_character(750, y)
+    for y in range(TOP, BOTTOM - 1, -5):
+        move_character(RIGHT, y)
 
 
 def move_bottom():
     print('BOTTOM')
 
-    for x in range(750, 49, -5):
-        move_character(x, 50)
+    for x in range(RIGHT, LEFT - 1, -5):
+        move_character(x, BOTTOM)
 
 
 def move_left():
     print('LEFT')
 
-    for y in range(50, 551, 5):
-        move_character(50, y)
+    for y in range(BOTTOM, TOP + 1, 5):
+        move_character(LEFT, y)
 
 
 def move_rectangle():
@@ -65,11 +72,17 @@ def move_rectangle():
     move_bottom()
     move_left()
 
+
 def move_triangle():
     print('TRIANGLE')
+
+    for x in range(100, 701, 5):
+        y = 100
+        move_character(x, y)
 
 
 move_circle()
 move_rectangle()
+move_triangle()
 
 close_canvas()
