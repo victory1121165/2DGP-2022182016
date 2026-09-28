@@ -29,10 +29,8 @@ def move_circle():
 
     for degree in range(0, 360, 5):
         theta = math.radians(degree)
-
         x = center_x + radius * math.cos(theta)
         y = center_y + radius * math.sin(theta)
-
         move_character(x, y)
 
 
