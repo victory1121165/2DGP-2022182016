@@ -12,6 +12,11 @@ RIGHT = 750
 TOP = 550
 BOTTOM = 50
 
+TRIANGLE_LEFT = 100
+TRIANGLE_RIGHT = 700
+TRIANGLE_TOP = 100
+TRIANGLE_BOTTOM = 500
+
 
 def move_character(x, y):
     clear_canvas()
@@ -60,16 +65,16 @@ def move_rectangle():
 
 
 def move_triangle():
-    for x in range(100, 701, 5):
-        y = 100
+    for x in range(TRIANGLE_LEFT, TRIANGLE_RIGHT + 1, 5):
+        y = TRIANGLE_TOP
         move_character(x, y)
 
-    for x in range(700, 399, -5):
-        y = 100 + (700 - x) * 400 / 300
+    for x in range(TRIANGLE_RIGHT, 399, -5):
+        y = TRIANGLE_TOP + (TRIANGLE_BOTTOM - TRIANGLE_TOP) * (TRIANGLE_RIGHT - x) / 300
         move_character(x, y)
 
-    for x in range(400, 99, -5):
-        y = 500 - (400 - x) * 400 / 300
+    for x in range(400, TRIANGLE_LEFT - 1, -5):
+        y = TRIANGLE_BOTTOM - (TRIANGLE_BOTTOM - TRIANGLE_TOP) * (400 - x) / 300
         move_character(x, y)
 
 
