@@ -10,7 +10,7 @@ def move_character(x, y):
     clear_canvas()
     character.draw(x, y)
     update_canvas()
-    delay(0.05)
+    delay(0.03)
 
 
 def move_circle():
