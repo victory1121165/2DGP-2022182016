@@ -76,14 +76,16 @@ def move_rectangle():
 def move_triangle():
     print('TRIANGLE')
 
-    # 첫 번째 변
     for x in range(100, 701, 5):
         y = 100
         move_character(x, y)
 
-    # 두 번째 변
     for x in range(700, 399, -5):
         y = 100 + (700 - x) * 400 / 300
+        move_character(x, y)
+
+    for x in range(400, 99, -5):
+        y = 500 - (400 - x) * 400 / 300
         move_character(x, y)
 
 
