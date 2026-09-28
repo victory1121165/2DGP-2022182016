@@ -12,7 +12,11 @@ def move_character(x, y):
     delay(0.05)
 
 
-move_character(400, 300)
+def move_circle():
+    print('CIRCLE')
+
+
+move_circle()
 
 delay(2)
 
