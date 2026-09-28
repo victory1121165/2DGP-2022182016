@@ -1,4 +1,5 @@
 {
     "python.terminal.executeInFileDir": true,
-    "python-envs.defaultEnvManager": "ms-python.python:system"
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "liveServer.settings.multiRootWorkspaceName": "2DGP-2022182016"
 }
