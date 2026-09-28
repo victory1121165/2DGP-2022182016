@@ -5,7 +5,7 @@ open_canvas(800, 600)
 
 character = load_image('character.png')
 
-MOVE_DELAY = 0.03
+MOVE_DELAY = 0.02
 
 LEFT = 50
 RIGHT = 750
