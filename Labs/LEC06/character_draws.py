@@ -65,6 +65,9 @@ def move_rectangle():
     move_bottom()
     move_left()
 
+def move_triangle():
+    print('TRIANGLE')
+
 
 move_circle()
 move_rectangle()
