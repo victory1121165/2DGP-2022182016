@@ -73,8 +73,9 @@ def move_triangle():
         move_character(x, y)
 
 
-move_circle()
-move_rectangle()
-move_triangle()
+while True:
+    move_circle()
+    move_rectangle()
+    move_triangle()
 
 close_canvas()
