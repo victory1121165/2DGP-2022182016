@@ -22,7 +22,7 @@ def move_circle():
         x = 400 + 200 * math.cos(theta)
         y = 300 + 200 * math.sin(theta)
 
-        print(x, y)
+        move_character(x, y)
 
 
 move_circle()
