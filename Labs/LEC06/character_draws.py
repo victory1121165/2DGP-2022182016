@@ -32,6 +32,9 @@ def move_circle():
 def move_rectangle():
     print('RECTANGLE')
 
+    for x in range(50, 751, 5):
+        move_character(x, 550)
+
 
 move_circle()
 move_rectangle()
