@@ -26,7 +26,7 @@ def move_character(x, y):
 
 
 def move_circle():
-    center_x = 400
+    center_x = 350
     center_y = 300
     radius = 200
 
