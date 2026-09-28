@@ -41,6 +41,9 @@ def move_rectangle():
     for x in range(750, 49, -5):
         move_character(x, 50)
 
+    for y in range(50, 551, 5):
+        move_character(50, y)
+
 
 move_circle()
 move_rectangle()
