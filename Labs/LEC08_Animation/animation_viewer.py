@@ -28,6 +28,8 @@ ANIMATIONS = {
     ],
 }
 
+sprite_sheet = load_image(SPRITE_SHEET_FILE)
+
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
