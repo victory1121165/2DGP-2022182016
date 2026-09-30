@@ -63,6 +63,13 @@ def advance_frame():
             rest_timer = 0.0
 
 
+def advance_animation():
+    global animation_index, frame_index, completed_plays
+    animation_index = (animation_index + 1) % len(animation_names)
+    frame_index = 0
+    completed_plays = 0
+
+
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
 running = True
@@ -86,8 +93,6 @@ while running:
         if rest_timer >= REST_SECONDS:
             is_resting = False
             rest_timer = 0.0
-            completed_plays = 0
-            animation_index = (animation_index + 1) % len(animation_names)
-            frame_index = 0
+            advance_animation()
 
 close_canvas()
