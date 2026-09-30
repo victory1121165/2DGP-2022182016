@@ -52,6 +52,14 @@ def draw_frame(frame):
     )
 
 
+def advance_frame():
+    global frame_index, completed_plays
+    frame_index += 1
+    if frame_index >= len(ANIMATIONS[animation_names[animation_index]]):
+        frame_index = 0
+        completed_plays += 1
+
+
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
 running = True
