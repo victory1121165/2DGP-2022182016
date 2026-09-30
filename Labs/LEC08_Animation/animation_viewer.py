@@ -91,7 +91,7 @@ while running:
         elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
             is_paused = not is_paused
 
-    if is_resting:
+    if is_resting and not is_paused:
         rest_timer += FRAME_INTERVAL
         if rest_timer >= REST_SECONDS:
             is_resting = False
