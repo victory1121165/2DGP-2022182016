@@ -53,11 +53,14 @@ def draw_frame(frame):
 
 
 def advance_frame():
-    global frame_index, completed_plays
+    global frame_index, completed_plays, is_resting, rest_timer
     frame_index += 1
     if frame_index >= len(ANIMATIONS[animation_names[animation_index]]):
         frame_index = 0
         completed_plays += 1
+        if completed_plays >= FRAMES_PER_ANIMATION:
+            is_resting = True
+            rest_timer = 0.0
 
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
@@ -69,7 +72,8 @@ while running:
     draw_frame(current_frames[frame_index])
     update_canvas()
     delay(FRAME_INTERVAL)
-    advance_frame()
+    if not is_resting:
+        advance_frame()
 
     for event in get_events():
         if event.type == SDL_QUIT:
