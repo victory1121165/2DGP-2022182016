@@ -68,6 +68,7 @@ def advance_animation():
     animation_index = (animation_index + 1) % len(animation_names)
     frame_index = 0
     completed_plays = 0
+    print(f'애니메이션 전환: {animation_names[animation_index]}')
 
 
 print('조작: 스페이스바 일시정지/재개, ESC 종료')
