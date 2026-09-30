@@ -68,6 +68,7 @@ while running:
     current_frames = ANIMATIONS[animation_names[animation_index]]
     draw_frame(current_frames[frame_index])
     update_canvas()
+    delay(FRAME_INTERVAL)
 
     for event in get_events():
         if event.type == SDL_QUIT:
