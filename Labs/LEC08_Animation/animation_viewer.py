@@ -70,6 +70,7 @@ def advance_animation():
     completed_plays = 0
 
 
+print('조작: 스페이스바 일시정지/재개, ESC 종료')
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 sprite_sheet = load_image(SPRITE_SHEET_FILE)
 
