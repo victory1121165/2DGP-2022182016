@@ -29,6 +29,13 @@ ANIMATIONS = {
 }
 
 sprite_sheet = load_image(SPRITE_SHEET_FILE)
+animation_names = list(ANIMATIONS.keys())
+animation_index = 0
+frame_index = 0
+completed_plays = 0
+frame_timer = 0.0
+rest_timer = 0.0
+is_resting = False
 
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
