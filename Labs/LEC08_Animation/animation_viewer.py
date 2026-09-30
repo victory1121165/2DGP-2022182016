@@ -87,5 +87,7 @@ while running:
             is_resting = False
             rest_timer = 0.0
             completed_plays = 0
+            animation_index = (animation_index + 1) % len(animation_names)
+            frame_index = 0
 
 close_canvas()
