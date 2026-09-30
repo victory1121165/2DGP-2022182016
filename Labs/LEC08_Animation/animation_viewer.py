@@ -28,7 +28,6 @@ ANIMATIONS = {
     ],
 }
 
-sprite_sheet = load_image(SPRITE_SHEET_FILE)
 animation_names = list(ANIMATIONS.keys())
 animation_index = 0
 frame_index = 0
@@ -72,6 +71,7 @@ def advance_animation():
 
 
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+sprite_sheet = load_image(SPRITE_SHEET_FILE)
 
 running = True
 while running:
