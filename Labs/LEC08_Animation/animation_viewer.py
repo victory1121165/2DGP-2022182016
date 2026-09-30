@@ -1,10 +1,13 @@
 from pico2d import *
 
 
-open_canvas(800, 600)
+CANVAS_WIDTH = 800
+CANVAS_HEIGHT = 600
+
+
+open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
 running = True
-
 while running:
     clear_canvas()
     update_canvas()
