@@ -57,6 +57,8 @@ open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 running = True
 while running:
     clear_canvas()
+    current_frames = ANIMATIONS[animation_names[animation_index]]
+    draw_frame(current_frames[frame_index])
     update_canvas()
 
     for event in get_events():
