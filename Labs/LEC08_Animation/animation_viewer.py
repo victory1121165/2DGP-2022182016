@@ -36,6 +36,7 @@ completed_plays = 0
 frame_timer = 0.0
 rest_timer = 0.0
 is_resting = False
+is_paused = False
 
 
 def draw_frame(frame):
@@ -79,7 +80,7 @@ while running:
     draw_frame(current_frames[frame_index])
     update_canvas()
     delay(FRAME_INTERVAL)
-    if not is_resting:
+    if not is_resting and not is_paused:
         advance_frame()
 
     for event in get_events():
@@ -87,6 +88,8 @@ while running:
             running = False
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
+            is_paused = not is_paused
 
     if is_resting:
         rest_timer += FRAME_INTERVAL
