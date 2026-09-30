@@ -81,4 +81,11 @@ while running:
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False
 
+    if is_resting:
+        rest_timer += FRAME_INTERVAL
+        if rest_timer >= REST_SECONDS:
+            is_resting = False
+            rest_timer = 0.0
+            completed_plays = 0
+
 close_canvas()
