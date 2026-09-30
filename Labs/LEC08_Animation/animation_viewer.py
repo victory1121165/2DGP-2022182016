@@ -69,6 +69,7 @@ while running:
     draw_frame(current_frames[frame_index])
     update_canvas()
     delay(FRAME_INTERVAL)
+    advance_frame()
 
     for event in get_events():
         if event.type == SDL_QUIT:
