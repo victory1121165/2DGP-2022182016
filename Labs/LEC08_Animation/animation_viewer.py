@@ -38,6 +38,20 @@ rest_timer = 0.0
 is_resting = False
 
 
+def draw_frame(frame):
+    left, top, width, height = frame
+    source_bottom = sprite_sheet.h - top - height
+    scale = min(CANVAS_WIDTH * 0.6 / width, CANVAS_HEIGHT * 0.6 / height)
+    draw_width = width * scale
+    draw_height = height * scale
+
+    sprite_sheet.clip_draw(
+        left, source_bottom, width, height,
+        CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2,
+        draw_width, draw_height,
+    )
+
+
 open_canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
 running = True
